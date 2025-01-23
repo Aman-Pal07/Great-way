@@ -73,7 +73,6 @@ const CarouselComponent = () => {
       </div>
 
       {/* Information Section */}
-      {/* Information Section */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-8 py-6 bg-white">
         <div className="flex items-center justify-center gap-2 py-4">
           <div className="w-6 h-6">

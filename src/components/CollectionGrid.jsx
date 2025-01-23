@@ -82,7 +82,7 @@ const CollectionGrid = () => {
       {/* Margin for mobile devices */}
       <Masonry
         breakpointCols={breakpoints}
-        className="flex w-full -ml-1"
+        className="flex w-full ml-[-6px]"
         columnClassName="pl-4 bg-clip-padding"
       >
         {data.map((item, index) => {
@@ -92,8 +92,8 @@ const CollectionGrid = () => {
           return (
             <div
               key={item.id}
-              className={`mb-4 relative group ${
-                isCenterItem ? "mt-[5rem] z-10" : "mt-[1rem]"
+              className={`mb-4 relative group  ${
+                isCenterItem ? "mt-[5rem]  z-10" : "mt-[1rem]"
               }`} // Apply extra margin for the center column and bring it to the front with z-index
             >
               {item.type === "image" ? (
@@ -122,11 +122,11 @@ const CollectionGrid = () => {
           );
         })}
 
-        <div className="absolute inset-0 mt-[60rem] flex flex-col items-center justify-center text-center text-black z-20">
+        <div className="absolute inset-0 mt-[50rem] sm:mt-[20rem] md:mt-[10rem] lg:mt-[60rem] flex flex-col items-center justify-center text-center text-black z-20">
           <h2 className="text-[2rem] font-bold tracking-[3px]">
             Khaas lamhon ke liye..
           </h2>
-          <p className="mt-2 text-lg sm:text-xl p-[-40rem] tracking-[0.5px] italic font-light whitespace-nowrap">
+          <p className="mt-2 text-lg sm:text-xl px-4 tracking-[0.5px] italic font-light">
             "Unleash timeless elegance on your special day with our exquisite{" "}
             <br /> wedding collection."
           </p>
