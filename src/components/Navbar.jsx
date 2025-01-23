@@ -54,14 +54,14 @@ const Navbar = () => {
           {/* Left: Brand Section */}
           <div className="text-center">
             <Link to="/">
-              <h1 className="text-2xl font-serif tracking-wide uppercase">
+              <h1 className="text-[22px] font-serif tracking-wide uppercase">
                 Great Way Studio
               </h1>
               <div className="text-gray-500">
-                <span className="block text-[9px] uppercase tracking-wider">
-                  Since 1881
+                <span className="block text-[10px] uppercase tracking-wider">
+                  Since 1998
                 </span>
-                <span className="block text-xs tracking-widest mt-0.5">
+                <span className="block text-[15px] tracking-widest mt-0.5">
                   India's Oldest Retailer
                 </span>
               </div>

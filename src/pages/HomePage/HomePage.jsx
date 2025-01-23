@@ -11,8 +11,10 @@ const HomePage = () => {
       <Navbar />
 
       <CarouselComponent />
-      <CollectionGrid />
 
+      <div className="mt-[12rem]">
+        <CollectionGrid />
+      </div>
       <CollectionComponent />
       <img
         className="mt-20"

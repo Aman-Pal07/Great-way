@@ -68,7 +68,7 @@ const trendingCategories = [
 
 const CollectionComponent = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 ">
       {/* Categories Section - Scrollable without a scrollbar */}
       <div className="flex items-center justify-between mt-8 mb-8 overflow-x-auto scrollbar-hide">
         {categories.map((category) => (

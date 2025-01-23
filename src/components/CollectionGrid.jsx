@@ -78,43 +78,58 @@ const breakpoints = {
 
 const CollectionGrid = () => {
   return (
-    <div className="mt-[8rem] sm:mt-0">
+    <div className="mt-[40rem] sm:mt-8">
       {/* Margin for mobile devices */}
       <Masonry
         breakpointCols={breakpoints}
-        className="flex w-full -ml-4"
+        className="flex w-full -ml-1"
         columnClassName="pl-4 bg-clip-padding"
       >
-        {data.map((item) => (
-          <div key={item.id} className="mb-4 relative group">
-            {item.type === "image" ? (
-              <div className="relative overflow-hidden rounded-lg shadow-md">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-auto object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-70"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out bg-black bg-opacity-50">
-                  <button className="px-4 py-2 text-black bg-white rounded hover:bg-gray-100 text-sm sm:text-base md:text-lg lg:text-xl">
-                    Shop Now
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div
-                className={`flex items-center justify-center h-80 text-2xl sm:text-3xl font-semibold rounded-lg shadow-md ${item.style}`}
-              >
-                {item.content}
-              </div>
-            )}
-          </div>
-        ))}
+        {data.map((item, index) => {
+          // Determine if the current item is the center item
+          const isCenterItem = index === Math.floor(data.length / 10);
 
-        {/* Manually adding another item with id 11 */}
-        <div key="manual-id" className="mb-4 relative group">
-          <div className="flex items-center justify-center h-80 text-2xl sm:text-3xl font-semibold rounded-lg shadow-md bg-green-700 text-yellow-200">
-            Flat 50% off on Selected Stock
-          </div>
+          return (
+            <div
+              key={item.id}
+              className={`mb-4 relative group mt-[20rem] ${
+                isCenterItem ? "mt-[5rem] z-10" : "mt-[1rem]"
+              }`} // Apply extra margin for the center column and bring it to the front with z-index
+            >
+              {item.type === "image" ? (
+                <div className="relative overflow-hidden rounded-lg   shadow-md">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-auto  object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-70"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out bg-black bg-opacity-50">
+                    <button className="px-4 py-2 text-black bg-white rounded hover:bg-gray-100 text-sm sm:text-base md:text-lg lg:text-xl">
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={`flex items-center justify-center h-80 text-2xl sm:text-3xl font-semibold rounded-lg shadow-md ${item.style}`}
+                >
+                  {item.content}
+                </div>
+              )}
+
+              {/* Add text to the center item */}
+            </div>
+          );
+        })}
+
+        <div className="absolute inset-0 mt-[60rem] flex flex-col items-center justify-center text-center text-black z-20">
+          <h2 className="text-[2rem] font-bold tracking-[3px]">
+            Khaas lamhon ke liye..
+          </h2>
+          <p className="mt-2 text-lg sm:text-xl p-[-40rem] tracking-[0.5px] italic font-light whitespace-nowrap">
+            "Unleash timeless elegance on your special day with our exquisite{" "}
+            <br /> wedding collection."
+          </p>
         </div>
       </Masonry>
     </div>
