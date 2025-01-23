@@ -12,7 +12,7 @@ const HomePage = () => {
 
       <CarouselComponent />
 
-      <div className="mt-[12rem]">
+      <div className="mt-[11rem]">
         <CollectionGrid />
       </div>
       <CollectionComponent />

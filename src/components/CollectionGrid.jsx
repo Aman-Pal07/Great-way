@@ -92,7 +92,7 @@ const CollectionGrid = () => {
           return (
             <div
               key={item.id}
-              className={`mb-4 relative group mt-[20rem] ${
+              className={`mb-4 relative group ${
                 isCenterItem ? "mt-[5rem] z-10" : "mt-[1rem]"
               }`} // Apply extra margin for the center column and bring it to the front with z-index
             >
