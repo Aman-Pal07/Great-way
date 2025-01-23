@@ -78,7 +78,7 @@ const breakpoints = {
 
 const CollectionGrid = () => {
   return (
-    <div className="mt-[40rem] sm:mt-8">
+    <div className="mt-[27rem] sm:mt-8">
       {/* Margin for mobile devices */}
       <Masonry
         breakpointCols={breakpoints}
@@ -92,16 +92,16 @@ const CollectionGrid = () => {
           return (
             <div
               key={item.id}
-              className={`mb-4 relative group  ${
-                isCenterItem ? "mt-[5rem]  z-10" : "mt-[1rem]"
-              }`} // Apply extra margin for the center column and bring it to the front with z-index
+              className={`mb-4 relative group ${
+                isCenterItem ? "mt-4 sm:mt-[5rem]" : "mt-0 sm:mt-[1rem]"
+              }`}
             >
               {item.type === "image" ? (
-                <div className="relative overflow-hidden rounded-lg   shadow-md">
+                <div className="relative overflow-hidden rounded-lg shadow-md">
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-auto  object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-70"
+                    className="w-full h-auto object-cover mt transition-opacity duration-300 ease-in-out group-hover:opacity-70"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out bg-black bg-opacity-50">
                     <button className="px-4 py-2 text-black bg-white rounded hover:bg-gray-100 text-sm sm:text-base md:text-lg lg:text-xl">
@@ -116,8 +116,6 @@ const CollectionGrid = () => {
                   {item.content}
                 </div>
               )}
-
-              {/* Add text to the center item */}
             </div>
           );
         })}

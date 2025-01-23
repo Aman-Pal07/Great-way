@@ -42,9 +42,7 @@ const MainFooter = () => {
                   <li>
                     <a href="#">Bulk Enquiry</a>
                   </li>
-                  <li>
-                    <a href="#">Blogs</a>
-                  </li>
+
                   <li>
                     <a href="#">FAQs</a>
                   </li>
@@ -58,7 +56,7 @@ const MainFooter = () => {
               </div>
 
               {/* Customer Service */}
-              <div className="space-y-1">
+              <div className="space-y-1 mt-4 md:mt-0">
                 <h3 className="text-lg font-semibold">Customer Service</h3>
                 <ul className="space-y-1">
                   <li>
@@ -74,7 +72,7 @@ const MainFooter = () => {
               </div>
 
               {/* My Profile */}
-              <div className="space-y-1">
+              <div className="space-y-1 mt-4 md:mt-0">
                 <h3 className="text-lg font-semibold">My Profile</h3>
                 <ul className="space-y-1">
                   <li>
@@ -115,7 +113,7 @@ const MainFooter = () => {
         </div>
 
         {/* Footer Bottom Row */}
-        <div className="mt-8 flex items-center justify-between border-t pt-6">
+        <div className="mt-8 flex flex-col items-center gap-4 border-t pt-6 md:flex-row md:justify-between">
           {/* Social Media Icons */}
           <div className="flex gap-4">
             <a href="#" className="text-2xl text-blue-600">
@@ -127,8 +125,8 @@ const MainFooter = () => {
           </div>
 
           {/* Copyright Text */}
-          <p className="text-sm text-gray-500">
-            Â©1881 Great Way Studio Sons. All Rights Reserved
+          <p className="text-center text-sm text-gray-500 md:text-right">
+            ©1881 Great Way Studio | All Rights Reserved
           </p>
         </div>
       </div>
